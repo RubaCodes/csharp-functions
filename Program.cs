@@ -6,7 +6,6 @@ void StampaArray(int[] array) {
     Console.Write('[');
 
     for (int i = 0; i < array.Length; i++) {
-
         Console.Write(array[i] + " , ");
     }
     Console.Write(']');
@@ -34,7 +33,14 @@ int sommaElementiArray(int[] array) {
 
 }
 //array di test
-int[] test = { 2, 6, 7, 5, 3, 9 };
+//int[] test = { 2, 6, 7, 5, 3, 9 };
+Console.WriteLine("Inserire il numero di elementi dell'array");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] test = new int[size];
+for (int i = 0; i < test.Length; i++) {
+    Console.WriteLine($"Inserire il {i+1}-esimo numero");
+    test[i] = Convert.ToInt32(Console.ReadLine());
+}
 Console.WriteLine("--Array di partenza--");
 StampaArray(test);
 Console.WriteLine("--Array elevato al quadrato--");
